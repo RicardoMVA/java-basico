@@ -17,6 +17,11 @@ public class Main {
 		
 		System.out.println("Saldo da conta " + c1.getNumero() + ": " + c1.getSaldo());
 		System.out.println("Saldo da conta " + c2.getNumero() + ": " + c2.getSaldo());
+		
+		c1.transferir(c2, 10);
+		
+		System.out.println("Saldo da conta " + c1.getNumero() + ": " + c1.getSaldo());
+		System.out.println("Saldo da conta " + c2.getNumero() + ": " + c2.getSaldo());
 
 	}
 
