@@ -47,15 +47,17 @@ public class Conta {
 	public void creditar(int valor) {
 		this.setSaldo(this.getSaldo() + valor);
 		System.out.println("Valor creditado na conta " + this.getNumero() + ": " + valor);
-		System.out.println("Novo saldo: " + this.getSaldo());
 	}
 	
 	public void debitar(int valor) {
 		this.setSaldo(this.getSaldo() - valor);
 		System.out.println("Valor debitado na conta " + this.getNumero() + ": " + valor);
-		System.out.println("Novo saldo: " + this.getSaldo());
 	}
 	
-
+	public void transferir(Conta contaCred, int valor) {
+		this.debitar(valor);
+		contaCred.creditar(valor);
+		System.out.println(valor + " foi transferido da conta " + this.getNumero() + " para a conta " + contaCred.getNumero());
+	}
 
 }
