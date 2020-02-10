@@ -4,16 +4,16 @@ public class Conta {
 	private String numero;
 	private int saldo;
 	private String cliente_nome;
-	
+
 	public Conta() {
 
 	}
-	
+
 	public Conta(String numero, String cliente_nome) {
 		this.numero = numero;
 		this.cliente_nome = cliente_nome;
 	}
-	
+
 	public Conta(String numero, int saldo, String cliente_nome) {
 		this.numero = numero;
 		this.saldo = saldo;
@@ -43,21 +43,27 @@ public class Conta {
 	public void setCliente_nome(String cliente_nome) {
 		this.cliente_nome = cliente_nome;
 	}
-	
+
 	public void creditar(int valor) {
 		this.setSaldo(this.getSaldo() + valor);
 		System.out.println("Valor creditado na conta " + this.getNumero() + ": " + valor);
 	}
-	
-	public void debitar(int valor) {
-		this.setSaldo(this.getSaldo() - valor);
-		System.out.println("Valor debitado na conta " + this.getNumero() + ": " + valor);
+
+	public void debitar(int valor) throws Exception {
+		if (this.getSaldo() - valor < 0) {
+			throw new Exception("Saldo insuficiente para debitar " + valor + " da conta " + this.getNumero() + "!");
+		} else {
+			this.setSaldo(this.getSaldo() - valor);
+			System.out.println("Valor debitado na conta " + this.getNumero() + ": " + valor);
+		}
+
 	}
-	
-	public void transferir(Conta contaCred, int valor) {
+
+	public void transferir(Conta contaCred, int valor) throws Exception {
 		this.debitar(valor);
 		contaCred.creditar(valor);
-		System.out.println(valor + " foi transferido da conta " + this.getNumero() + " para a conta " + contaCred.getNumero());
+		System.out.println(
+				valor + " foi transferido da conta " + this.getNumero() + " para a conta " + contaCred.getNumero());
 	}
 
 }
