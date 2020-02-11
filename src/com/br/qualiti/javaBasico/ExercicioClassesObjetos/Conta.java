@@ -3,21 +3,21 @@ package com.br.qualiti.javaBasico.ExercicioClassesObjetos;
 public class Conta {
 	private String numero;
 	private int saldo;
-	private String cliente_nome;
+	private Cliente cliente;
 
 	public Conta() {
 
 	}
 
-	public Conta(String numero, String cliente_nome) {
+	public Conta(String numero, Cliente cliente) {
 		this.numero = numero;
-		this.cliente_nome = cliente_nome;
+		this.cliente = cliente;
 	}
 
-	public Conta(String numero, int saldo, String cliente_nome) {
+	public Conta(String numero, int saldo, Cliente cliente) {
 		this.numero = numero;
 		this.saldo = saldo;
-		this.cliente_nome = cliente_nome;
+		this.cliente = cliente;
 	}
 
 	public String getNumero() {
@@ -36,12 +36,12 @@ public class Conta {
 		this.saldo = saldo;
 	}
 
-	public String getCliente_nome() {
-		return cliente_nome;
+	public Cliente getCliente() {
+		return cliente;
 	}
 
-	public void setCliente_nome(String cliente_nome) {
-		this.cliente_nome = cliente_nome;
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	public void creditar(int valor) {

@@ -8,7 +8,7 @@ public class Cliente {
 
 	}
 
-	public Cliente(String nome, int cpf) {
+	public Cliente(String nome, double cpf) {
 		this.nome = nome;
 		this.cpf = cpf;
 	}
@@ -21,11 +21,11 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public int getCpf() {
+	public double getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(double cpf) {
 		this.cpf = cpf;
 	}
 

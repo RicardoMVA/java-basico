@@ -3,8 +3,11 @@ package com.br.qualiti.javaBasico.ExercicioClassesObjetos;
 public class Main {
 
 	public static void main(String[] args) {
-		Conta c1 = new Conta("123", "Ricardo");
-		Conta c2 = new Conta("321", "Ivan");
+		Cliente p1 = new Cliente("Ricardo", 12345678910D);
+		Cliente p2 = new Cliente("Ivan", 10987654321D);
+
+		Conta c1 = new Conta("123", p1);
+		Conta c2 = new Conta("321", p2);
 
 		c1.setSaldo(100);
 		c2.setSaldo(0);
