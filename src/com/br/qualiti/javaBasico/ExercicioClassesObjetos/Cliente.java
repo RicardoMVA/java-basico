@@ -2,7 +2,7 @@ package com.br.qualiti.javaBasico.ExercicioClassesObjetos;
 
 public class Cliente {
 	private String nome;
-	private int cpf;
+	private double cpf;
 
 	public Cliente() {
 
