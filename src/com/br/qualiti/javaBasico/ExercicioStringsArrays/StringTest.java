@@ -2,7 +2,7 @@ package com.br.qualiti.javaBasico.ExercicioStringsArrays;
 
 public class StringTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		String s1 = new String("Ricardo");
 		String s2 = new String("Ricardo");
 		
@@ -25,8 +25,6 @@ public class StringTest {
 		
 		System.out.println(s3 == s4);
 		
-		
-
 	}
 
 }
