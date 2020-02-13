@@ -2,7 +2,7 @@ package com.br.qualiti.javaBasico.QualitiBank;
 
 public class Conta {
 	private String numero;
-	private int saldo;
+	private double saldo;
 	private Cliente cliente;
 
 	public Conta() {
@@ -14,7 +14,7 @@ public class Conta {
 		this.cliente = cliente;
 	}
 
-	public Conta(String numero, int saldo, Cliente cliente) {
+	public Conta(String numero, double saldo, Cliente cliente) {
 		this.numero = numero;
 		this.saldo = saldo;
 		this.cliente = cliente;
@@ -28,11 +28,11 @@ public class Conta {
 		this.numero = numero;
 	}
 
-	public int getSaldo() {
+	public double getSaldo() {
 		return saldo;
 	}
 
-	public void setSaldo(int saldo) {
+	public void setSaldo(double saldo) {
 		this.saldo = saldo;
 	}
 
@@ -44,12 +44,12 @@ public class Conta {
 		this.cliente = cliente;
 	}
 
-	public void creditar(int valor) {
+	public void creditar(double valor) {
 		this.setSaldo(this.getSaldo() + valor);
 		System.out.println("Valor creditado na conta " + this.getNumero() + ": " + valor);
 	}
 
-	public void debitar(int valor) throws Exception {
+	public void debitar(double valor) throws Exception {
 		if (this.getSaldo() - valor < 0) {
 			throw new Exception("Saldo insuficiente para debitar " + valor + " da conta " + this.getNumero() + "!");
 		} else {
@@ -59,7 +59,7 @@ public class Conta {
 
 	}
 
-	public void transferir(Conta contaCred, int valor) throws Exception {
+	public void transferir(Conta contaCred, double valor) throws Exception {
 		this.debitar(valor);
 		contaCred.creditar(valor);
 		System.out.println(
