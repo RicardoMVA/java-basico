@@ -1,8 +1,8 @@
-package com.br.qualiti.javaBasico.ExercicioStringsArrays;
+package com.br.qualiti.javaBasico.QualitiBank;
 
-import com.br.qualiti.javaBasico.ExercicioStringsArrays.Conta;
+import com.br.qualiti.javaBasico.QualitiBank.Conta;
 
-public class TesteArrayContas {
+public class MainTesteArrayContas {
 
 	public static void main(String[] args) {
 		Cliente p1 = new Cliente("Ricardo", "12345678910", TipoCliente.VIP);
@@ -11,7 +11,6 @@ public class TesteArrayContas {
 		Conta c1 = new Conta("123", p1);
 		Conta c2 = new Conta("321", p2);
 		
-		RepositorioClientesArray repositorio = new RepositorioClientesArray();
 		RepositorioContasArray repositorioContas = new RepositorioContasArray();
 		
 		repositorioContas.inserir(c1);

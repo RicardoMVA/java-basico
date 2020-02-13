@@ -1,6 +1,6 @@
-package com.br.qualiti.javaBasico.ExercicioStringsArrays;
+package com.br.qualiti.javaBasico.QualitiBank;
 
-public class TesteArrayClientes {
+public class MainTesteArrayClientes {
 
 	public static void main(String[] args) {
 		Cliente p1 = new Cliente("Ricardo", "12345678910", TipoCliente.VIP);

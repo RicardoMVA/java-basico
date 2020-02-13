@@ -1,4 +1,4 @@
-package com.br.qualiti.javaBasico.ExercicioStringsArrays;
+package com.br.qualiti.javaBasico.QualitiBank;
 
 public class RepositorioContasArray {
 	private Conta[] contas;

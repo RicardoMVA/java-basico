@@ -1,6 +1,6 @@
-package com.br.qualiti.javaBasico.ExercicioStringsArrays;
+package com.br.qualiti.javaBasico.QualitiBank;
 
-import com.br.qualiti.javaBasico.ExercicioStringsArrays.TipoCliente;
+import com.br.qualiti.javaBasico.QualitiBank.TipoCliente;
 
 public class Cliente {
 	private String nome;
