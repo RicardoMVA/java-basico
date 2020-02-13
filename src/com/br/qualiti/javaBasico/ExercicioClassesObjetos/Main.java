@@ -1,6 +1,6 @@
 package com.br.qualiti.javaBasico.ExercicioClassesObjetos;
 
-import com.br.qualiti.javaBasico.ExercicioStringsArrays.TipoCliente;
+import com.br.qualiti.javaBasico.QualitiBank.TipoCliente;
 
 public class Main {
 
