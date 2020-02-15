@@ -7,6 +7,7 @@ public class ContaImposto extends Conta {
 		super(numero, saldo, cliente);		
 	}
 	
+	@Override
 	public void debitar(double valor) throws Exception {
 		if (this.getSaldo() - valor < 0) {
 			throw new Exception("Saldo insuficiente para debitar " + valor + " da conta " + this.getNumero() + "!");

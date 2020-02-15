@@ -16,7 +16,7 @@ public class ContaBonificada extends Conta {
 		this.bonus = 0;
 	}
 	
-//	faz override em creditar da classe conta abstrata
+	@Override
 	public void creditar(double valor) {
 		this.bonus = this.bonus + (valor * 0.01);
 		super.creditar(valor);
